@@ -108,39 +108,29 @@ const newObject = array => ({
 
 
 
-let sum = function(a, b, c, d) {
-  return a + b + c + d;
-};
+let sum = (a, b, c, d) => `${a + b + c + d}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = function() {
-  return {
+let objectLit = () => ({
     key1: 'value1',
     key2: 'value2',
     key3: 'value3',
-  };
-};
+});
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(objectLit());
 
 
-let sumAndProduct = function(a, b) {
-  let sum = a + b;
-  let product = a * b;
-  return [sum, product];
-};
+let sumAndProduct = (a, b) => `Sum: ${a + b}, Product: ${a * b}`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(sumAndProduct(3, 9));
 
 
-let message = function(name) {
-  return `Hello, ${name}!`;
-};
+let message = name => `Hello, ${name}!`;
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // console.log(message('Allie'));
@@ -190,17 +180,19 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scope();
+joe.scope();
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// joe.scopeArrow();
+joe.scopeArrow();
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
-//
+// Thw object Joe
+
 // 2. What is "this" when joe.scopeArrow() is invoked?
-//
+// The dom window
+
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// This does not refer to an object in an arrow function, it refers to the object that called the function, not the target object of the function.
